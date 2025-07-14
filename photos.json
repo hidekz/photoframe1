@@ -1,4 +1,4 @@
-[
+loadPhotos([
   "photo/photo01.jpg",
   "photo/photo02.jpg",
   "photo/photo03.jpg",
@@ -7,4 +7,4 @@
   "photo/photo06.jpg",
   "photo/photo07.jpg",
   "photo/photo08.jpg"
-]
+]);
