@@ -6,5 +6,6 @@ loadPhotos([
   "photo/photo05.jpg",
   "photo/photo06.jpg",
   "photo/photo07.jpg",
-  "photo/photo08.jpg"
+  "photo/photo08.jpg",
+  "photo/photo09.jpg"
 ]);
