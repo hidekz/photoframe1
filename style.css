@@ -18,8 +18,8 @@ body {
 
 /* 各画像の表示設定：16:9比率、枠線・角丸 */
 .grid img {
-  width: 160px;
-  height: 90px;             /* 16:9比率 */
+  width: 30vw;
+  height: auto;             /* 16:9比率 */
   object-fit: cover;        /* はみ出す部分をトリミング */
   display: block;
   cursor: pointer;
