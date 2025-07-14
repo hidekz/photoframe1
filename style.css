@@ -9,7 +9,7 @@ body {
 /* ギャラリー表示：常に3列、中央寄せ */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 160px); /* 横3枚固定 */
+  grid-template-columns: repeat(3, 30vw); /* 横3枚固定 */
   gap: 10px;
   justify-content: center;
   padding: 10px;
