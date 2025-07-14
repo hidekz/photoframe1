@@ -4,15 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="theme-color" content="#000000">
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
   <title>Photo Frame PWA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="data:," />
 </head>
 <body>
   <div id="gallery" class="grid"></div>
+
   <div id="fullscreen" class="hidden" onclick="hideFullscreen()">
     <img id="fullscreen-img" src="">
   </div>
+
   <script src="app.js"></script>
+  <script src="photos.js"></script> <!-- JSONP形式で画像を読み込む -->
 </body>
 </html>
