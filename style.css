@@ -1,3 +1,4 @@
+/* 全体の基本スタイル */
 body {
   margin: 0;
   background: #000;
@@ -5,26 +6,28 @@ body {
   font-family: sans-serif;
 }
 
+/* ギャラリー表示：常に3列、中央寄せ */
 .grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 160px); /* 横3枚固定 */
   gap: 10px;
-  padding: 10px;
   justify-content: center;
-  max-width: 510px; /* 160px × 3 + 10px × 2 = 510px */
+  padding: 10px;
   margin: 0 auto;
 }
 
+/* 各画像の表示設定：16:9比率、枠線・角丸 */
 .grid img {
-  width: 160px;             /* 横幅 */
-  height: 90px;             /* 16:9の縦幅 */
-  object-fit: cover;        /* はみ出さずぴったり表示 */
+  width: 160px;
+  height: 90px;             /* 16:9比率 */
+  object-fit: cover;        /* はみ出す部分をトリミング */
   display: block;
   cursor: pointer;
   border: 2px solid #444;
   border-radius: 4px;
 }
 
+/* フルスクリーン表示の枠 */
 #fullscreen {
   position: fixed;
   top: 0;
@@ -38,10 +41,12 @@ body {
   z-index: 999;
 }
 
+/* 非表示時 */
 #fullscreen.hidden {
   display: none;
 }
 
+/* フルスクリーン内の画像：画面に収まるように */
 #fullscreen img {
   max-width: 100%;
   max-height: 100%;
