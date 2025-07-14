@@ -2,8 +2,8 @@ const gallery = document.getElementById('gallery');
 const fullscreen = document.getElementById('fullscreen');
 const fullscreenImg = document.getElementById('fullscreen-img');
 
-// 一覧表示処理
-function displayPhotos(photoList) {
+// コールバックとして呼び出される関数
+function loadPhotos(photoList) {
   photoList.forEach(src => {
     const img = document.createElement('img');
     img.src = src;
@@ -25,17 +25,10 @@ function hideFullscreen() {
   fullscreenImg.src = '';
 }
 
-// JSONから画像URLを取得
-fetch('photos.json')
-  .then(res => {
-    if (!res.ok) throw new Error('JSONの読み込みに失敗しました');
-    return res.json();
-  })
-  .then(displayPhotos)
-  .catch(err => {
-    console.error(err);
-    gallery.textContent = '画像の読み込みに失敗しました';
-  });
+// JSONP の読み込み
+const script = document.createElement('script');
+script.src = 'photos.js';
+document.body.appendChild(script);
 
 // PWA Service Worker登録
 if ('serviceWorker' in navigator) {
