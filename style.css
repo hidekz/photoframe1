@@ -11,11 +11,15 @@ body {
   gap: 10px;
   padding: 10px;
   justify-content: center;
+  max-width: 510px; /* 160px × 3 + 10px × 2 = 510px */
+  margin: 0 auto;
 }
 
 .grid img {
-  width: 120px;
-  height: auto;
+  width: 160px;             /* 横幅 */
+  height: 90px;             /* 16:9の縦幅 */
+  object-fit: cover;        /* はみ出さずぴったり表示 */
+  display: block;
   cursor: pointer;
   border: 2px solid #444;
   border-radius: 4px;
